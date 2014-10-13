@@ -3,8 +3,10 @@ compiler:
   - clang
   - gcc
 env:
-  - memcheck=yes
-  - memcheck=no
+  - memcheck=yes optimize=yes
+  - memcheck=yes optimize=no
+  - memcheck=no optimize=yes
+  - memcheck=no optimize=no
 before_install:
   - sudo apt-get update
   - sudo apt-get install -y libcairo2-dev libpango1.0-dev valgrind
