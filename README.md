@@ -2,7 +2,7 @@
 
 AEGeAn: <b>a</b>nalysis and <b>e</b>valuation of <b>ge</b>nome <b>an</b>notations
 
-Copyright (c) 2010-2014, Daniel S. Standage and CONTRIBUTORS.
+Copyright (c) 2010-2015, Daniel S. Standage and CONTRIBUTORS.
 See LICENSE and for details.
 Project homepage: http://standage.github.io/AEGeAn.
 
