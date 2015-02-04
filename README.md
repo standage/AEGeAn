@@ -8,5 +8,5 @@ Project homepage: http://standage.github.io/AEGeAn.
 
 [![AEGeAn build status](https://api.travis-ci.org/standage/AEGeAn.svg?branch=master)](https://travis-ci.org/standage/AEGeAn)
 [![Coverity Scan build status](https://scan.coverity.com/projects/1021/badge.svg)](https://scan.coverity.com/projects/1021)
-[![ReadTheDocs build status](https://readthedocs.org/projects/aegean/badge/?version=latest)](https://readthedocs.org/projects/aegean/badge/?version=v0.11.0)
+[![ReadTheDocs build status](https://readthedocs.org/projects/aegean/badge/?version=v0.11.0)](https://readthedocs.org/projects/aegean/badge/?version=v0.11.0)
 
