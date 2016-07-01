@@ -25,7 +25,7 @@ and one containing transcript alignments. Although the GFF3 Specification
 explicitly supports several similar encoding conventions for alignment features,
 only one is supported by GAEVAL, as shown below.
 
-.. code-block:: gff3
+.. code-block:: text
 
     ctg123 . cDNA_match 1050  1500  5.8e-42  +  . ID=match00001;Target=cdna0123 12 462
     ctg123 . cDNA_match 5000  5500  8.1e-43  +  . ID=match00001;Target=cdna0123 463 963

@@ -14,15 +14,10 @@ Input
 
 Input for LocusPocus is one or more files in GFF3 format (LocusPocus can also
 read from standard input if a dash (`-`) is provided as the input filename).
-The only strict requirement is that the input must be `valid GFF3`_, although
-users should be aware of the common pitfalls described on :doc:`this page
-<gff3>`.
-
-The use of `##sequence-region` pragmas is optional, and many GFF3 files do not
-include them. LocusPocus uses this information when computing the location of
-iLoci at the ends of a sequence. Note that if these pragmas are not declared
-explicitly, iLoci will only be reported for sequence regions containing
-annotated features.
+At a bare minimum, the only requirement is that the input must be `valid GFF3`_
+and contain gene features. See :doc:`this page <gff3>` for a discussion of
+common pitfalls and :ref:`instructions <GFF3ValidationDocs>` for validating a
+GFF3 file's syntax and compatibility with LocusPocus.
 
 Users can override `gene` as the default feature of interest, replace it with
 one or more other feature types, and construct iLoci for these features in the

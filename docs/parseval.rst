@@ -36,7 +36,7 @@ comparisons are possible.
   if ParsEval sees any intron features in a gene model it will assume all
   introns are declared explicitly. Violations of that assumption will likely
   elicit a program error.
-  
+
   ParsEval is pretty flexible in handling various common conventions for
   encoding gene structure: exons + start/stop codons, exons + CDS, CDS + UTRs,
   etc. Any subset of features that completely captures the gene's exon/intron
@@ -48,6 +48,9 @@ comparisons are possible.
   will create one. Note, however, that ParsEval will treat all such transcripts
   as belonging to separate distinct genes, which will erroneously inflate
   summary statistics reported by ParsEval.
+
+See :ref:`GFF3ValidationDocs` for instructions on validating ParsEval input
+files.
 
 Output
 ------
