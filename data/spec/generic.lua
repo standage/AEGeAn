@@ -19,6 +19,12 @@ is_root_feature = function(feat)
     end)
 end
 
+is_protein_coding = function(gene)
+    it("is a protein-coding gene", function()
+        expect(gene:has_child_of_type("mRNA")).should_be(true)
+    end)
+end
+
 is_complete_seq = function(region)
     it("describes a complete chromosome/scaffold/contig sequence", function()
         seqid = region:get_seqid()
@@ -74,6 +80,17 @@ has_cds = function(mrna)
     end)
 end
 
+has_cds_relaxed = function(mrna)
+    local has_coding_exons = mrna:has_child_of_type("CDS")
+    local has_exons = mrna:has_child_of_type("exon")
+    local has_codons = mrna:has_child_of_type("start_codon") and
+                       mrna:has_child_of_type("stop_codon")
+    local has_implicit_cds = has_exons and has_codons
+    it("has a coding sequence", function()
+        expect(has_coding_exons or has_implicit_cds).should_be(true)
+    end)
+end
+
 has_single_cds = function(mrna)
     it("has a single coding sequence", function()
         cdsid = nil
@@ -86,5 +103,11 @@ has_single_cds = function(mrna)
             end
         end
         expect(consistent).should_be(true)
+    end)
+end
+
+has_mrna_parent = function(feature)
+    it("is associated with an mRNA", function()
+        expect(feature:appears_as_child_of_type("mRNA")).should_be(true)
     end)
 end
